@@ -1,4 +1,16 @@
-<?php include"session.php"; ?>
+<?php 
+include"session.php";
+
+$_SESSION["visites"] = [
+    'souris'=>1528723031,
+    'casque'=>1528723027,
+    'chaussures'=>1528723021,
+    'robot'=>1528723018,
+    'alteres'=>1528723036,
+    'bracelet'=>1528723033,
+    'montre'=>1528723035
+];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +32,9 @@
     </ul>
 
     <?php 
-        session_start();
-        var_dump($_SESSION);
+        echo '<br />';
+        echo 'Bonjour ',$_SESSION["nom"],'<br />'; 
+        echo 'session_id() = ',session_id(),'<br />'; 
     ?>
 
 </body>
