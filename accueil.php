@@ -10,6 +10,7 @@ $_SESSION["visites"] = [
     'bracelet'=>1528723033,
     'montre'=>1528723035
 ];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
