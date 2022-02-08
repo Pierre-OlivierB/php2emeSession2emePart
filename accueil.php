@@ -1,3 +1,4 @@
+<?php include"session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +10,19 @@
 <body>
 
     <ul>
-    <li><a href="souris.php">Souris</a></li>
-    <li><a href="robot.php">Robot</a></li>
-    <li><a href="alteres.php">Altères</a></li>
-    <li><a href="casque.php">Casque</a></li>
-    <li><a href="chaqussures.php">Chaussures</a></li>
-    <li><a href="bracelet.php">Bracelet</a></li>
-    <li><a href="montre.php">Montre</a></li>
+        <li><a href="souris.php">Souris</a></li>
+        <li><a href="robot.php">Robot</a></li>
+        <li><a href="alteres.php">Altères</a></li>
+        <li><a href="casque.php">Casque</a></li>
+        <li><a href="chaussures.php">Chaussures</a></li>
+        <li><a href="bracelet.php">Bracelet</a></li>
+        <li><a href="montre.php">Montre</a></li>
     </ul>
+
+    <?php 
+        session_start();
+        var_dump($_SESSION);
+    ?>
 
 </body>
 </html>
