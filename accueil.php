@@ -36,6 +36,10 @@ $_SESSION["visites"] = [
         echo '<br />';
         echo 'Bonjour ',$_SESSION["nom"],'<br />'; 
         echo 'session_id() = ',session_id(),'<br />'; 
+
+        if(isset($_GET['retour'][$n])){
+
+        }
     ?>
 
 </body>
