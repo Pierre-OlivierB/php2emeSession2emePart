@@ -1,5 +1,6 @@
 <?php 
 include"session.php";
+require "Historique.php";
 
 $_SESSION["visites"] = [
     'souris'=>1528723031,
@@ -10,6 +11,10 @@ $_SESSION["visites"] = [
     'bracelet'=>1528723033,
     'montre'=>1528723035
 ];
+if(isset($_GET['retour']))
+{
+Historique::$historique[]=$_GET['retour'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -34,11 +39,13 @@ $_SESSION["visites"] = [
 
     <?php 
         echo '<br />';
-        echo 'Bonjour ',$_SESSION["nom"],'<br />'; 
-        echo 'session_id() = ',session_id(),'<br />'; 
+        echo 'Bonjour '.$_SESSION["nom"].'<br />'; 
+        echo 'session_id() = '.session_id().'<br />'; 
 
-        if(isset($_GET['retour'][$n])){
-
+        if(isset($_GET['retour'])){
+            foreach (Historique::$historique as $key=>$value) {
+                echo $value. " test";
+            }
         }
     ?>
 
