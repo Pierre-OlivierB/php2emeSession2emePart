@@ -3,8 +3,9 @@ include('session.php');
 
 if(isset($_GET['retour']))
     {
-        $retour=$_GET['retour'];
-        $retour.=$actuel;
+        $retours=$_GET['retour'];
+        $retour=array();
+        $retour=array($retours=>$actuel);
 
 
         // var_dump($retour);
@@ -49,13 +50,17 @@ if(isset($_GET['retour']))
 
         foreach ($message as $key=> $value)
         {
-            echo ($value.'<br />');
+            foreach($value as $k=>$v)
+            {
+              echo ($k." : ".$v.'<br />');  
+            }
+            
             // var_dump($key);
             // var_dump($value);
         }
-        print_r($message);
+        // print_r($message);
         // var_dump($message);
-        unset($longueur);
+        // unset($longueur);
     }
     // var_dump($_SESSION['test']);
 

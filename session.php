@@ -86,6 +86,6 @@ if (! isset($_SESSION["date"]) ) {
 } 
 // Détermination de la date et de l’heure actuelle (pas celle 
 // de l’ouverture de la session). 
-$actuel = ' à '.date('H:i:s'); 
-
+// $actuel = ' à '.date('H:i:s'); 
+$actuel =time(); 
 ?>
