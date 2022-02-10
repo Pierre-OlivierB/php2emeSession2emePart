@@ -1,5 +1,9 @@
 <?php
 
-class Historique{
-    public static $historique=array();
-}
+    static $test=array();
+     function visite($page)
+    {
+        $test[]=$page; 
+        echo implode("','",$test);
+        return $test;
+    }
