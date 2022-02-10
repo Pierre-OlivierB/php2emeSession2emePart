@@ -1,14 +1,16 @@
 <?php
 // require "Historique.php";
-
-$n=6;
+// include('session.php');
+// $_SESSION['historique']=$n;
+// $retour=$_SESSION['historique']='bracelet';
 
 include('session.php');
+$retour= 'bracelet'.$actuel;
 
-// $_SESSION['historique']=$n;
-$retour=$n;
-
-// $retour=$_SESSION['historique']='bracelet';
+//test marche:
+// $n=6;
+// session_start(); 
+// $retour=$n;
 ?>
 
 <h1>Bracelet</h1>

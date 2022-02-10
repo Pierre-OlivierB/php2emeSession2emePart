@@ -1,13 +1,17 @@
 <?php
 // require "Historique.php";
-
-$n=4;
-
-include('session.php');
-
+// include('session.php');
 // $retour=$_SESSION['historique']='casque';
 // $_SESSION['historique']=$n;
-$retour=$n;
+
+include('session.php');
+$retour= 'casque'.$actuel;
+
+
+// test marche:
+// $n=4;
+// session_start(); 
+// $retour=$n;
 ?>
 
 <h1>Casque</h1>

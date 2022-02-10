@@ -1,14 +1,19 @@
     <?php
 // require "Historique.php";
+// include('session.php');
+// $_SESSION['historique']=$n;
+// $retour=$_SESSION['historique']='souris';
 
-$n=1;
+
 
 include('session.php');
+$retour= 'souris'.$actuel;
 
-// $_SESSION['historique']=$n;
-$retour=$n;
 
-// $retour=$_SESSION['historique']='souris';
+//test marche:
+// session_start(); 
+// $n=1;
+// $retour=$n;
 ?>
 
 <h1>Souris</h1>

@@ -34,8 +34,8 @@ if(isset($_GET['retour']))
         $message=$_SESSION['test'];
         foreach ($message as $key)
         {
-            echo ($key);
-            var_dump($key);
+            echo ($key.'<br />');
+            // var_dump($key);
         }
         // var_dump($message);
     }

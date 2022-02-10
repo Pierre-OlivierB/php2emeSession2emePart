@@ -1,13 +1,16 @@
     <?php
 // require "Historique.php";
-
-$n=2;
-
-include('session.php');
-
+// include('session.php');
 // $retour=$_SESSION['historique']='robot';
 // $_SESSION['historique']=$n;
-$retour=$n;
+
+include('session.php');
+$retour= 'robot'.$actuel;
+
+//test marche:
+// session_start(); 
+// $n=2;
+// $retour=$n;
 ?>
 
 <h1>Robot</h1>

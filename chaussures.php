@@ -1,14 +1,17 @@
 <?php
 // require "Historique.php";
-
-$n=5;
+// include('session.php');
+// $_SESSION['historique']=$n;
+// $retour=$_SESSION['historique']='chaussures';
 
 include('session.php');
+$retour= 'chaussures'.$actuel;
 
-// $_SESSION['historique']=$n;
-$retour=$n;
+// test marche:
+// session_start(); 
+// $n=5;
+// $retour=$n;
 
-// $retour=$_SESSION['historique']='chaussures';
 ?>
 
 <h1>Chaussures</h1>
