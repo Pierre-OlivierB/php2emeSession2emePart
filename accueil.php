@@ -18,14 +18,64 @@ if(isset($_GET['retour']))
         //     6=>"bracelet",
         //     7=>"montre",
         // ];
+        
 
         if(!isset($_SESSION['test']))
         {
             $_SESSION['test']=array();
             // echo "test init";
         }
+        $message=$_SESSION['test'];
+        // var_dump($message);
+
+        // $denver=array_search($retours,$message);
+        // echo $denver;
+        // if(array_search($retours,$message)!=false)
+        // {
+        //     $denver=array_search($retours,$message);
+        //     echo $denver;
+        //     echo "oui <br />";
+        // }
+        // if(in_array($retours,$message))
+        // {
+        //     echo "oui <br />";
+        // }
+        // else {
+        //     echo "pas trouvé <br />";
+        // }
+        // echo implode($message[0])."<br />";
+        // var_dump($message[[0]]);
+        // echo implode($message);
+        // print_r($message);
+        // echo "<br />";
+
+        //@tentative d'enlever une valeure présente pour la remplacer par la nouvelle;
+        foreach ($message as $clef=> $value)
+        {
+            foreach($value as $c=>$val)
+            {
+              if ($c ===$retours) {
+                //   echo $k;
+                //   echo $key ." les numero c'est lui <br />";
+                //   echo $v."<br />";
+                //   echo "oui <br />";
+                unset($message[$clef]);
+                //   array_splice($message,$key,1);
+                //   array_walk($message, function (& $item) {
+                //     $item[$actuel] = $item[$key];
+                //     unset($item['old_key']);
+                //  });
+              }  
+            }
+            
+            // var_dump($key);
+            // var_dump($value);
+        }
+
+
         if(isset($_SESSION['test']))
         {
+
 
             $_SESSION['test'][]=$retour;
             // array_unshift($_SESSION['test'],$retour);
@@ -37,7 +87,7 @@ if(isset($_GET['retour']))
             $_SESSION['test']=$retour;
             // echo "test 1";
         }
-        $message=$_SESSION['test'];
+        
         
         $message=array_reverse($_SESSION['test']);
         while(count($message)>3)
@@ -52,7 +102,7 @@ if(isset($_GET['retour']))
         {
             foreach($value as $k=>$v)
             {
-              echo ($k." : ".$v.'<br />');  
+              $histoire= ($k." : ".$v.'<br />');  
             }
             
             // var_dump($key);
@@ -86,7 +136,19 @@ if(isset($_GET['retour']))
         <li><a href="montre.php">Montre</a></li>
     </ul>
 
+
+    
     <?php 
+         foreach ($message as $key=> $value)
+         {
+             foreach($value as $k=>$v)
+             {
+               echo ($k." : ".$v.'<br />');  
+             }
+             
+             // var_dump($key);
+             // var_dump($value);
+         }
     // $n=$_GET['retour'];
     // require_once("Historique.php");
     // include('session.php');
