@@ -7,7 +7,8 @@
 
 
 include('session.php');
-$retour= 'souris'.$actuel;
+$retour= 'souris';
+// $retour= 'souris'.$actuel;
 
 
 //test marche:

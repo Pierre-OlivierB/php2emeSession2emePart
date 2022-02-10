@@ -5,7 +5,8 @@
 // $_SESSION['historique']=$n;
 
 include('session.php');
-$retour= 'casque'.$actuel;
+$retour= 'casque';
+// $retour= 'casque'.$actuel;
 
 
 // test marche:

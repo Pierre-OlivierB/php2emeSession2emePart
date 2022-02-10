@@ -5,7 +5,8 @@
 // $retour=$_SESSION['historique']='montre';
 
 include('session.php');
-$retour= 'montre'.$actuel;
+$retour= 'montre';
+// $retour= 'montre'.$actuel;
 
 // test marche:
 // session_start(); 

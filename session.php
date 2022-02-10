@@ -51,6 +51,8 @@
 // $test=$pages[$n];
 
 session_start(); 
+// session_unset();
+
 // Tester si la session est nouvelle (cad ouverte par 
 // l’appel session_start() ci-dessus) ou ancienne (cad ouverte 
 //par un appel antérieur à session_start()). 
@@ -85,4 +87,5 @@ if (! isset($_SESSION["date"]) ) {
 // Détermination de la date et de l’heure actuelle (pas celle 
 // de l’ouverture de la session). 
 $actuel = ' à '.date('H:i:s'); 
+
 ?>

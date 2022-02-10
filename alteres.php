@@ -6,7 +6,8 @@
 // $page=$_SESSION['historique'];
 // visite($page);
 include('session.php');
-$retour= 'alteres'.$actuel;
+$retour= 'alteres';
+// $retour= 'alteres'.$actuel;
 
 //test marche:
 // session_start(); 

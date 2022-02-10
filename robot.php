@@ -5,7 +5,8 @@
 // $_SESSION['historique']=$n;
 
 include('session.php');
-$retour= 'robot'.$actuel;
+$retour= 'robot';
+// $retour= 'robot'.$actuel;
 
 //test marche:
 // session_start(); 

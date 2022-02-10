@@ -1,10 +1,13 @@
 <?php
-session_start();
+include('session.php');
 
 if(isset($_GET['retour']))
     {
         $retour=$_GET['retour'];
-        var_dump($retour);
+        $retour.=$actuel;
+
+
+        // var_dump($retour);
         // $pages=[
         //     1=>"souris",
         //     2=>"robot",
@@ -18,26 +21,41 @@ if(isset($_GET['retour']))
         if(!isset($_SESSION['test']))
         {
             $_SESSION['test']=array();
-            echo "test init";
+            // echo "test init";
         }
         if(isset($_SESSION['test']))
         {
 
             $_SESSION['test'][]=$retour;
-            echo "test set";
+            // array_unshift($_SESSION['test'],$retour);
+            
+            // echo "test set";
         }
         if(!isset($_SESSION['test']) && is_array($_SESSION['test']))
         {
             $_SESSION['test']=$retour;
-            echo "test 1";
+            // echo "test 1";
         }
         $message=$_SESSION['test'];
-        foreach ($message as $key)
+        
+        $message=array_reverse($_SESSION['test']);
+        while(count($message)>3)
         {
-            echo ($key.'<br />');
-            // var_dump($key);
+            // echo "ok";
+            // echo 'Nmb :'.count($message).'<br />';
+            $longueur=array_pop($message);
         }
+       
+
+        foreach ($message as $key=> $value)
+        {
+            echo ($value.'<br />');
+            // var_dump($key);
+            // var_dump($value);
+        }
+        print_r($message);
         // var_dump($message);
+        unset($longueur);
     }
     // var_dump($_SESSION['test']);
 
@@ -85,7 +103,9 @@ if(isset($_GET['retour']))
         // echo $m[2];
     // }
 
-    
+//     $stack = array("orange", "banana", "apple", "raspberry");
+// $fruit = array_pop($stack);
+// print_r($stack);
     ?>
 
 </body>

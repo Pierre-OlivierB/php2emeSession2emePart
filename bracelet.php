@@ -5,7 +5,8 @@
 // $retour=$_SESSION['historique']='bracelet';
 
 include('session.php');
-$retour= 'bracelet'.$actuel;
+$retour= 'bracelet';
+// $retour= 'bracelet'.$actuel;
 
 //test marche:
 // $n=6;
