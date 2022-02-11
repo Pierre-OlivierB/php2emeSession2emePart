@@ -19,19 +19,19 @@ if (isset($_GET['retour'])) {
     if (!isset($_SESSION['test'])) {
         $_SESSION['test'] = array();
     }
-    //j'attrappe mon tableau quad je lie à une variable
+    //j'attrappe mon tableau que je lie à une variable
     $message = $_SESSION['test'];
 
-    //si ma session est instancié
+    //si ma session est instanciée
     if (isset($_SESSION['test'])) {
-        //je regarde dans mon tableau si le nom de la page retourné est présente
+        //je regarde dans mon tableau si le nom de la page retournée est présente
         //si c'est le cas, on ne modifie que le timestamp 
         if ($lookfor = array_search($retour, $message)) {
             $_SESSION['test'][$retour] = $actuel;
         }
         $_SESSION['test'][$retour] = $actuel;
     }
-    //si ma session est instancié mais n'a pas de valeur insérée.
+    //si ma session est instanciée mais n'a pas de valeur insérée.
     //condition de ma première visite
     if (!isset($_SESSION['test']) && is_array($_SESSION['test'])) {
         $_SESSION['test'] = $retour;
@@ -83,7 +83,7 @@ if (isset($_GET['retour'])) {
         //j'instancie 2 variables correspondantes
         $dernier = 'dernier article visité:';
         $derniers= 'derniers articles visités:';
-        //je concatène la varibla à mon compteur correspondant
+        //je concatène la variable à mon compteur correspondant
         if($numSees==1)
         {
             $numSees.=" ".$dernier;
